@@ -1,0 +1,135 @@
+.wrap {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+  }
+.cube {
+  margin: auto;
+  position: relative;
+  height: 350px;
+  width: 350px;
+  transform-style: preserve-3d;
+  border-radius: 25px;
+}
+.cubePage {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  padding: auto;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border: 3px solid  #cccccc;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.wrap h2{
+  font-size: 36px;
+  color:  #cccccc;  
+  font-family: 'Roboto', sans-serif;
+}
+.CubeHovered {
+  border: 3px solid   #c39d42;
+}
+.CubeHovered h2 {
+  color: #c39d42;
+  transition: color 0.4s ease-out;
+}
+.front {
+  transform: translateZ(250px);
+}
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.cube {
+  animation: rotate 30s infinite linear;
+}
+.wrap:hover .front {
+  transform: translateZ(350px);
+}
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+.cube > div {
+  transition: transform 3s ease-in;
+}
+
+@media screen and (max-width: 1000px) {
+  .cube {
+    height: 250px;
+    width: 250px;
+  }
+  .front {
+    transform: translateZ(150px);
+  }
+  .wrap:hover .front {
+    transform: translateZ(250px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .cube {
+    height: 150px;
+    width: 150px;
+  }
+  .front {
+    transform: translateZ(50px);
+  }
+  .wrap:hover .front {
+    transform: translateZ(150px);
+  }
+  .wrap:hover .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+  .wrap:hover .right {
+    transform: rotateY(-270deg) translateZ(50px) translateX(50px);
+  }
+  .wrap:hover .left {
+    transform: rotateY(270deg) translateZ(50px) translateX(-50px);
+  }
+  .wrap:hover .top {
+    transform: rotateX(-270deg) translateZ(50px) translateY(-50px);
+  }
+  .wrap:hover .bottom {
+    transform: rotateX(270deg) translateZ(50px) translateY(50px);
+  }
+  .wrap h2{
+    font-size: 24px;
+  }
+}
