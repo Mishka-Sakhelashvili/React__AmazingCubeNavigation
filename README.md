@@ -1,12 +1,12 @@
 ### Hi there 👋
 <hr />
 
-<img width="400px" src="https://github.com/Mishka-Sakhelashvili/React__Actor/blob/master/IMG/4yvekb.gif"/>
+<img width="600px" src="https://github.com/Mishka-Sakhelashvili/React__AmazingCubeNavigation/blob/master/IMG/4yvfd5.gif"/>
 
 
 <hr />
 <h2><i>Desc: </i></h2>
-<p> Famous Actor Display </p>
+<p> Hard CSS Cube Moving Animation </p>
 
 <hr />
 <h2><i>Used Technologies: </i></h2>
